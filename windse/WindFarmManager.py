@@ -160,10 +160,10 @@ class GenericWindFarm(object):
                     lower.append(seg_chord/modifier)
                     upper.append(max(min(seg_chord*modifier,max_chord),c_avg))
                     c_avg = (c_avg*k+seg_chord)/(k+1)
-            plt.plot(x,lower,"--r",label="opt_bounds")
+            plt.plot(x,lower,"--r",label="Optimization bounds")
             plt.plot(x,upper,"--r")
         else:
-            plt.plot(x,bounds[0][-self.blade_segments:],"--r",label="opt_bounds")
+            plt.plot(x,bounds[0][-self.blade_segments:],"--r",label="Optimization bounds")
             plt.plot(x,bounds[1][-self.blade_segments:],"--r")
 
         for i in range(self.numturbs):
